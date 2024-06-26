@@ -30,6 +30,15 @@ def move_boxes(boxes: int, carry_limit: int, parts: int) -> int:
 
 
 def split_piles(boxes: int, carry_limit: int, parts: int):
+    """Recursive function to split piles of boxes into acceptable sizes
+
+    Params:
+        boxes (int) - total number of boxes in the room
+        carry_limit (int) - number of boxes that can be carried at once
+        parts (int) - number of parts to split (piles of zero size discarded)
+    Returns (list[int]) - piles of boxes of acceptable size
+    """
+
     # Start by splitting piles into equal parts via division
     piles = [int(boxes / parts)] * parts
 
